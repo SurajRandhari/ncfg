@@ -18,13 +18,13 @@ function SectionFour() {
 
     return (
         <div className={`w-full h-[169px] relative flex flex-col justify-center items-center ${bgColors[bgColorIndex]}`}>
-            <div className={`text-[40px] font-bold font-taviraj text-center text-white ${colors[colorIndex]}`}>
+            <div className={`text-2xl md:text-[40px] font-bold font-taviraj text-center text-white mb-2 md:mb-4 ${colors[colorIndex]}`}>
                 How you can help Us
             </div>
-            <div className={`text-xl font-bold font-taviraj text-center text-white ${colors[colorIndex]}`}>
+            <div className={`text-xl font-bold font-taviraj text-center text-white mb-2 md:mb-4 ${colors[colorIndex]}`}>
                 Just Call at +91 <span className='font-bold underline'>9938447929</span> to make a Donation
             </div>
-            <div className={`text-[40px] font-bold font-taviraj text-center text-white ${colors[colorIndex]}`}>
+            <div className={`text-2xl md:text-[40px] font-bold font-taviraj text-center text-white ${colors[colorIndex]}`}>
                 Or ⇓
             </div>
         </div>

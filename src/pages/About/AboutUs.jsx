@@ -7,9 +7,10 @@ function AboutUs() {
     <>
     <div className='w-full'>
         <motion.img 
-          src={about} 
+          src="https://seekandsavethelost.com/wp-content/uploads/2014/11/cropped-Luke-19_10-website-banner-2.jpg" 
+          // src={about} 
           alt="" 
-          className="w-full max-h-120 lg:h-80 object-cover"
+          className="w-full max-h-120 lg:h-100 object-cover"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
@@ -24,7 +25,7 @@ function AboutUs() {
             TESTIMONY
           </h2>
           <p className="mt-6 text-gray-600 font-taviraj text-xl px-4 md:px-20">
-            My self pastor-A.K.Tandi village of Litiguda in the district of Nuapada state of Odisha. I born in a Christian Family but I was nominal in Christ. There was a only one family accepted LORD Jesus Christ in our village.So the village People are opposed and persicuited to our family every day. That time the Christian leaders are came to our home and pray for our family and taught about Jesus and strengthen us.In that time they taught me about Lord Jesus. Who is he? Why did came to this World? And also taught me about Sin And Salvation.I had listen about that matter and broken my heart. From that time I was ready to read the Bible And know about the Lord Jesus more and more.I Thanked Lord and received Lord Jesus Christ as my Personal Saviour and took Baptism On Date-10/5/1981.
+            My self Pastor-A.K.Tandi village of Litiguda in the district of Nuapada state of Odisha. I born in a Christian Family but I was nominal in Christ. There was a only one family accepted LORD Jesus Christ in our village.So the village People are opposed and persicuited to our family every day. That time the Christian leaders are came to our home and pray for our family and taught about Jesus and strengthen us.In that time they taught me about Lord Jesus. Who is he? Why did came to this World? And also taught me about Sin And Salvation.I had listen about that matter and broken my heart. From that time I was ready to read the Bible And know about the Lord Jesus more and more.I Thanked Lord and received Lord Jesus Christ as my Personal Saviour and took Baptism On Date-10/5/1981.
           </p>
           <p className="mt-6 text-gray-600 font-taviraj text-xl px-4 md:px-20 ">
             After few month I had taken Bible training under Central India Bible College, Ittarshi(M.P) During The Year Of 1986 to 1988 Regarding (B.Th) Course.after Come back I started the ministry with my life partner Mrs.Martha On the Unreached Area of Nuapada and Kalahandi Districts Of our Odisha State. Where People are totally bounded with their Traditional Activities and Serving the Idols. People are not Knowing about the true Worship Of God. Most of the people of this Area are Uneducated and suffering lot lake of Food, Cloth, Hospital facility and communication facility are also not good. Because of their poor conditions their children are unable to getting the secular education and died by many diseases due to the lake of medical facilities no other organization coming and visit this Area expect our Ministry.I hope you well known about our Odisha Where the Australian Missionary and his two small children are killed by the others people.In this situation we have been following the foot step of Christ and giving our self in the hand of the living God to fight against the devil for the extended the kingdom of our living God.

@@ -9,7 +9,7 @@ import youthMinistry from '../assets/Servicess/youth-ministry.webp'
 function Service() {
   return (
     <div className="flex justify-center items-center h-93 bg-slate-50">
-      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 my-8">
+      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 my-8 mx-3">
         {/* Service Card 1 */}
         <div className="bg-white rounded-lg shadow-lg p-6 hover:bg-gray-200 transition-colors duration-300 sm:w-full md:w-80 lg:w-96">
           <img className="w-24 h-24 mx-auto mb-4" src={childrenMinistry} alt="Service Icon" />

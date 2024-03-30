@@ -6,11 +6,11 @@ function About() {
         <div className="flex items-center justify-center">
             <div className="w-full relative bg-blue-950 flex items-start justify-center flex-wrap">
                 <div className="w-full text-center mt-2">
-                    <div className="text-orange-700 text-[26px] font-extrabold font-taviraj underline">About Us</div>
+                    <div className="text-orange-700 text-2xl font-extrabold font-taviraj underline">ABOUT</div>
                 </div>
-                <div className="w-full md:w-1/2 flex justify-center mt-0 ">
+                <div className="w-full md:w-1/2 flex justify-center mt-0 p-6">
                     <div className=" overflow-hidden " style={{borderRadius:'50%', border:'5px solid white'}}>
-                        <img className="w-[250px] h-[247px] " alt='' src={Aktandi}/>
+                        <img className="w-[250px] h-[237px] " alt='' src={Aktandi}/>
                     </div>
                 </div>
                 <div className="w-full md:w-1/2 flex flex-col justify-start py-4 px-4 mt-3 lg:mt-0">

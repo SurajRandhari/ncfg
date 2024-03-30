@@ -1,7 +1,30 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { motion } from 'framer-motion';
 import Frame from '../../assets/Servicces/Frame 27.webp';
 
+import P1 from '../../assets/Servicess/Bible/P1.webp';
+import P2 from '../../assets/Servicess/Bible/P2.webp';
+import P3 from '../../assets/Servicess/Bible/P3.webp';
+
+
+
+const services = [
+  {
+    title: "Service 1",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    image: P1
+  },
+  {
+    title: "Service 3",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    image: P2
+  },
+  {
+    title: "Service 2",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    image: P3
+  }
+];
 
 const BibleTeaching = () => {
   return (
@@ -13,6 +36,8 @@ const BibleTeaching = () => {
 
       {/* Main Content */}
       <div className="container mx-auto mt-4 px-4 md:px-28">
+
+        <Fragment>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -40,6 +65,22 @@ const BibleTeaching = () => {
             Join us in our mission to spread the light and truth of God&apos;s word, making disciples of all nations, starting right here in Odisha.
           </p>
         </motion.div>
+        </Fragment>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8 mb-4 px-4 md:px-16">
+          {services.map((service, index) => (
+            <motion.div 
+              key={index} 
+              className="bg-white rounded-lg shadow-lg p-4 hover:bg-gray-200 transition-colors duration-300"
+              whileHover={{ scale: 1.07 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <img src={service.image} alt={service.title} className="w-full mb-4 rounded-lg h-25" />
+              {/* <h2 className="text-xl font-bold mb-2">{service.title}</h2> */}
+              {/* <p>{service.description}</p> */}
+            </motion.div>
+          ))}
+        </div>
 
       </div>
     </div>

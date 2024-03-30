@@ -23,16 +23,14 @@ function Navbar() {
   return (
     <header className="shadow sticky z-50 top-0">
       <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5">
-        <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+        <div className="flex flex-wrap justify-between font-taviraj font-medium items-center mx-auto max-w-screen-xl">
           <Link to="/" className="flex items-center">
             <img
-              // src="https://alexharkness.com/wp-content/uploads/2020/06/logo-2.png"
               src={Logo}
               className="mr-3 h-14"
               alt="Logo"
             />
           </Link>
-          {/* Adjusting the wrapper to hide on larger screens (lg and above) */}
           <div className={`hidden lg:flex lg:items-center`}>
             <ul className="flex space-x-8 font-medium">
               <li>
@@ -117,7 +115,7 @@ function Navbar() {
                           Bible Teaching
                         </NavLink>
                       </li>
-                      <li>
+                      {/* <li>
                         <NavLink
                           to="/service2"
                           className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
@@ -125,7 +123,7 @@ function Navbar() {
                         >
                           Service 2
                         </NavLink>
-                      </li>
+                      </li> */}
                     </ul>
                   )}
                 </div>
@@ -174,10 +172,12 @@ function Navbar() {
           {/* Mobile menu content */}
           {isMobileMenuOpen && (
             <div className="absolute top-10 right-0 bg-white p-4">
-              <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+              <ul className="flex flex-col mt-4 font-medium  lg:flex-row lg:space-x-8 lg:mt-0">
                 <li>
                   <NavLink
                     to="/"
+                    exact
+                    activeClassName="text-orange-700"
                     className="block py-2 pr-4 pl-3 duration-200 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0"
                     onClick={closeMenus}
                   >
@@ -187,6 +187,8 @@ function Navbar() {
                 <li>
                   <NavLink
                     to="/about"
+                    exact
+                    activeClassName="text-orange-700"
                     className="block py-2 pr-4 pl-3 duration-200 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0"
                     onClick={closeMenus}
                   >

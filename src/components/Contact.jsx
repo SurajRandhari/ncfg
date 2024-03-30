@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 function Contact() {
     return (
-        <footer className="bg-[#5371c4] py-12 px-8 font-[sans-serif]">
+        <footer className="bg-[#5371c4] py-12 px-[34px] md:px-[64px] font-[sans-serif]">
             <div className="grid max-sm:grid-cols-1 max-lg:grid-cols-2 lg:grid-cols-3 gap-8">
 
                 <div>
