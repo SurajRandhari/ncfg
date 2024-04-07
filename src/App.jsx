@@ -2,7 +2,6 @@ import React from 'react'
 import Home from './pages/Home/Home'
 import AboutUs from './pages/About/AboutUs'
 import Services from './pages/Services/Services'
-import ContactUs from './pages/ContactUs/ContactUs'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import ChildrenMinistry from './pages/Services/ChildrenMinistry'
 import YouthMinistry from './pages/Services/YouthMinistry'
@@ -13,7 +12,7 @@ import BibleMinistry from './pages/Services/BibleMinistry'
 
 function App() {
   return (
-    <>
+    
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<Home />} >
@@ -27,12 +26,11 @@ function App() {
       <Route path="bible-ministry" element={<BibleMinistry />} />
       <Route path="service2" element={<Services />} />
       <Route path="contact" element={<ChildrenMinistry />} />
-
       </Route>
     </Routes>
     </BrowserRouter>
      
-    </>
+
   )
 }
 

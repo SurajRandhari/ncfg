@@ -1,6 +1,56 @@
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { Link } from 'react-router-dom'
 
 function Contact() {
+    const form = useRef();
+
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
+    const [message, setMessage] = useState('');
+    const [isSubmitting, setIsSubmitting] = useState(false); // State to track form submission
+
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        if (isSubmitting) return; // Prevent multiple submissions
+
+        setIsSubmitting(true); // Set submitting state to true
+
+        // Your EmailJS service ID, template ID, and Public Key
+        const serviceId = 'service_mhoywhr';
+        const templateId = 'template_a9zbrtn';
+        const publicKey = 'AoM48ab1vlSNiJeVY';
+
+        // Create a new object that contains dynamic template params
+        const templateParams = {
+            user_name: name,
+            user_email: email,
+            phone: phone,
+            message: message,
+        };
+
+        // Send the email using EmailJS
+        emailjs.send(serviceId, templateId, templateParams, publicKey)
+            .then((response) => {
+                console.log('Email sent successfully!', response);
+                setName('');
+                setEmail('');
+                setPhone('');
+                setMessage('');
+            })
+            .catch((error) => {
+              console.error('Error sending email:', error);
+            })
+            .finally(() => {
+              setIsSubmitting(false); // Reset submitting state after submission
+            });
+    };
+
+
+
     return (
         <footer className="bg-[#5371c4] py-12 px-[34px] md:px-[64px] font-[sans-serif]">
             <div className="grid max-sm:grid-cols-1 max-lg:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -19,17 +69,7 @@ function Contact() {
                                     </svg>
                                 </Link>
                             </li>
-                            {/* Other contact information */}
-                            {/* <li className="bg-gray-100 hover:bg-gray-200 h-8 w-8 rounded-full flex items-center justify-center shrink-0">
-                                <a href="javascript:void(0)">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill='#000' viewBox="0 0 511 512">
-                                        <path
-                                            d="M111.898 160.664H15.5c-8.285 0-15 6.719-15 15V497c0 8.285 6.715 15 15 15h96.398c8.286 0 15-6.715 15-15V175.664c0-8.281-6.714-15-15-15zM96.898 482H30.5V190.664h66.398zM63.703 0C28.852 0 .5 28.352.5 63.195c0 34.852 28.352 63.2 63.203 63.2 34.848 0 63.195-28.352 63.195-63.2C126.898 28.352 98.551 0 63.703 0zm0 96.395c-18.308 0-33.203-14.891-33.203-33.2C30.5 44.891 45.395 30 63.703 30c18.305 0 33.195 14.89 33.195 33.195 0 18.309-14.89 33.2-33.195 33.2zm289.207 62.148c-22.8 0-45.273 5.496-65.398 15.777-.684-7.652-7.11-13.656-14.942-13.656h-96.406c-8.281 0-15 6.719-15 15V497c0 8.285 6.719 15 15 15h96.406c8.285 0 15-6.715 15-15V320.266c0-22.735 18.5-41.23 41.235-41.23 22.734 0 41.226 18.495 41.226 41.23V497c0 8.285 6.719 15 15 15h96.403c8.285 0 15-6.715 15-15V302.066c0-79.14-64.383-143.523-143.524-143.523zM466.434 482h-66.399V320.266c0-39.278-31.953-71.23-71.226-71.23-39.282 0-71.239 31.952-71.239 71.23V482h-66.402V190.664h66.402v11.082c0 5.77 3.309 11.027 8.512 13.524a15.01 15.01 0 0 0 15.875-1.82c20.313-16.294 44.852-24.907 70.953-24.907 62.598 0 113.524 50.926 113.524 113.523zm0 0"
-                                            data-original="#000000" />
-                                    </svg>
-                                </a>
-                            </li> */}
-                            {/* Other contact information */}
+
                             <li className="bg-gray-100 hover:bg-gray-200 h-8 w-8 rounded-full flex items-center justify-center shrink-0">
                                 <Link to="javascript:void(0)">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill='#000' viewBox="0 0 24 24">
@@ -39,7 +79,6 @@ function Contact() {
                                     </svg>
                                 </Link>
                             </li>
-                            {/* Other contact information */}
                             <li className="bg-gray-100 hover:bg-gray-200 h-8 w-8 rounded-full flex items-center justify-center shrink-0">
                                 <Link to="javascript:void(0)">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill='#000'
@@ -52,7 +91,6 @@ function Contact() {
 
                                 </Link>
                             </li>
-                            {/* Other contact information */}
                             <li className="bg-gray-100 hover:bg-gray-400 h-8 w-8 rounded-full flex items-center justify-center shrink-0">
                                 <Link to="https://www.youtube.com/@NCFGMINISTRY1995">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill='#000' viewBox="0 0 682.667 682.667">
@@ -74,7 +112,6 @@ function Contact() {
 
                                 </Link>
                             </li>
-                            {/* Other contact information */}
                         </ul>
                     </div>
                 </div>
@@ -95,7 +132,6 @@ function Contact() {
                             </div>
                             <span className="text-white ml-4">At-Litiguda, P.O-Bharuamunda, Via-Sinapali, Pin-766108 ,       -Dist-Nuapada (Orissa) INDIA</span>
                         </li>
-                        {/* Other contact information */}
 
                         <li className="flex items-center">
                             <div className="bg-gray-100 h-8 w-8 rounded-full flex items-center justify-center shrink-0">
@@ -107,7 +143,6 @@ function Contact() {
                             </div>
                             <span className="text-white ml-4">+91 9938447929</span>
                         </li>
-                        {/* Other contact information */}
                         <li className="flex items-center">
                             <div className="bg-gray-100 h-8 w-8 rounded-full flex items-center justify-center shrink-0">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill='#000'
@@ -120,19 +155,19 @@ function Contact() {
                             <span className="text-white font-taviraj underline ml-4">anandkumartandi64@gmail.com</span>
                         </li>
 
-                        {/* Other contact information */}
                     </ul>
                 </div>
 
                 {/* Form */}
-                <div className="text-center pr-18">
-                    <h4 className="text-white font-semibold font-taviraj text-3xl">Contact Information</h4>
-                    <form className="flex flex-col items-center mt-6">
-                        <input type="text" placeholder="Name" className="bg-gray-100 w-full p-2 mb-4 rounded-md" />
-                        <input type="phone" placeholder="Phone" className="bg-gray-100 w-full p-2 mb-4 rounded-md" />
-                        <input type="email" placeholder="Email" className="bg-gray-100 w-full p-2 mb-4 rounded-md" />
-                        <textarea placeholder="Message" className="bg-gray-100 w-full p-2 mb-4 rounded-md" rows="4"></textarea>
-                        <button type="submit" className="md:w-32 bg-orange-700 hover:bg-blue-dark text-white font-bold py-3 px-6 rounded-lg mt-3 hover:bg-orange-600 transition ease-in-out duration-300">Submit</button>
+                <div className="text-center pr-18 ">
+                    <h4 className="text-white font-semibold font-taviraj text-3xl">Contact Us</h4>
+                    <form className="flex flex-col items-center mt-6 emailForm" ref={form} onSubmit={handleSubmit}>
+                        <input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} name="user_name" className="bg-gray-100 w-full p-2 mb-4 rounded-md" required />
+                        <input type="phone" placeholder="Phone" value={phone} onChange={(e) => setPhone(e.target.value)} name="phone" className="bg-gray-100 w-full p-2 mb-4 rounded-md" />
+                        <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} name="user_email" className="bg-gray-100 w-full p-2 mb-4 rounded-md" required />
+                        <textarea placeholder="Message" name="message" value={message} onChange={(e) => setMessage(e.target.value)} className="bg-gray-100 w-full p-2 mb-4 rounded-md" rows="4" required></textarea>
+                        {/* <button type="submit" value="send" disabled={isSubmitting} className="md:w-32 bg-orange-700 hover:bg-blue-dark text-white font-bold py-3 px-6 rounded-lg mt-3 hover:bg-orange-600 transition ease-in-out duration-300">Submit</button> */}
+                        <button type="submit" value="send" disabled={isSubmitting} className="md:w-32 bg-orange-700 hover:bg-blue-dark text-white font-bold py-3 px-6 rounded-lg mt-3 hover:bg-orange-600 transition ease-in-out duration-300">{isSubmitting ? 'Submitting...' : 'Submit'}</button>
                     </form>
                 </div>
 
