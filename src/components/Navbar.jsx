@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { FaAngleDown } from "react-icons/fa";
 import Logo from '../assets/Logo/NCFG MINISTRY.webp'
 
 
@@ -55,9 +56,11 @@ function Navbar() {
                 <div className="relative">
                   <button
                     onClick={toggleSubMenu}
-                    className="text-gray-700 hover:text-orange-700 focus:outline-none"
+                    className="text-gray-700 hover:text-orange-700 focus:outline-none flex items-center"
                   >
                     Services
+                    {/* <FaAngleDown className="ml-1" /> */}
+                    <FaAngleDown style={{ transform: isSubMenuOpen ? 'rotate(180deg)' : 'rotate(0deg)' }} className="ml-1" />
                   </button>
                   {isSubMenuOpen && (
                     <ul className="absolute left-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg w-48">
