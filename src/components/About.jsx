@@ -1,5 +1,6 @@
 import React from 'react';
 import Aktandi from '../assets/MyImg/Aktandi.webp';
+import a1 from '../assets/About/a1.webp';
 
 function About() {
     return (
@@ -14,7 +15,7 @@ function About() {
                     </div>
                 </div>
                 <div className="w-full md:w-1/2 flex flex-col justify-start py-4 px-4 mt-3 lg:mt-0">
-                    <div className="text-gray-50 text-3xl lg:text:4xl font-taviraj font-medium mb-2">Rev. A.K. Tandi</div>
+                    <div className="text-gray-50 text-3xl lg:text:4xl font-taviraj font-medium mb-2">Rev. A. K. Tandi</div>
                     <div className="text-gray-50 text-xl lg:text:xl font-taviraj font-medium ">President of -</div>
                     <div className="text-gray-50 text-2xl lg:text:2xl font-taviraj font-medium mb-5 ">National Co-operative For Gospel</div>
                     <div className='h-4'></div>

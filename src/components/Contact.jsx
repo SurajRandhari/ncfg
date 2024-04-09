@@ -56,7 +56,7 @@ function Contact() {
             <div className="grid max-sm:grid-cols-1 max-lg:grid-cols-2 lg:grid-cols-3 gap-8">
 
                 <div>
-                    <h4 className="text-white font-taviraj font-semibold text-lg">Social Hnadle</h4>
+                    <h4 className="text-white font-taviraj font-semibold text-lg">Social Handle</h4>
                     <p className="text-sm mt-6 text-white">Follow Us On Socials And jouin Us</p>
                     <div className="social-icons-container flex  mt-2">
                         <ul className="mt-10 flex items-center gap-4">
