@@ -53,7 +53,7 @@ function SectionOne() {
                     transition={{ duration: 0.5, delay: 0.4 }}
                     whileHover={{ scale: 1.15 }}
                 >
-                    <img src={Action2} alt="" className="w-full h-auto" />
+                    <img src={Action2} alt="" className="w-full h-auto rounded-lg" />
                 </motion.div>
 
                 {/* Image 4 */}
@@ -64,7 +64,7 @@ function SectionOne() {
                     transition={{ duration: 0.5, delay: 0.2 }}
                     whileHover={{ scale: 1.15 }}
                 >
-                    <img src={Action3} alt="" className="w-full h-auto" />
+                    <img src={Action3} alt="" className="w-full h-auto rounded-lg" />
                 </motion.div>
             </div>
         </div>

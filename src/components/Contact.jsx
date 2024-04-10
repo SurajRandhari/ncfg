@@ -70,7 +70,7 @@ function Contact() {
                                 </Link>
                             </li>
 
-                            <li className="bg-gray-100 hover:bg-gray-200 h-8 w-8 rounded-full flex items-center justify-center shrink-0">
+                            {/* <li className="bg-gray-100 hover:bg-gray-200 h-8 w-8 rounded-full flex items-center justify-center shrink-0">
                                 <Link to="javascript:void(0)">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill='#000' viewBox="0 0 24 24">
                                         <path
@@ -90,7 +90,7 @@ function Contact() {
 
 
                                 </Link>
-                            </li>
+                            </li> */}
                             <li className="bg-gray-100 hover:bg-gray-400 h-8 w-8 rounded-full flex items-center justify-center shrink-0">
                                 <Link to="https://www.youtube.com/@NCFGMINISTRY1995">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill='#000' viewBox="0 0 682.667 682.667">
